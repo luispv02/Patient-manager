@@ -1,0 +1,13 @@
+// Estilos para los elementos principales de nuestra aplicacion (header, main, seccion, footer)
+
+.login,
+.register{
+    width: 100%;
+    height: 100vh;
+    background-image: urL(../../assets/images/background.jpg);
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
