@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Register = () => {
   return (
@@ -35,7 +36,7 @@ const Register = () => {
 
                 <div className="register__content__options">
                     <p>Do you already have an account?</p>
-                    <a href="!#">Login</a>
+                    <Link to='/login'>Login</Link>
                 </div>
             </div>
         </div>

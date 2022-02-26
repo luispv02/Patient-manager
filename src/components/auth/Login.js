@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import user from '../../assets/images/user.svg'
 
 const Login = () => {
@@ -26,7 +27,7 @@ const Login = () => {
 
                 <div className="login__content__options">
                     <p>You do not have an account?</p>
-                    <a href="!#">Create account</a>
+                    <Link to='/register'>Create account</Link>
                 </div>
             </div>
         </div>

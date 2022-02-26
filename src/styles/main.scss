@@ -3,3 +3,13 @@
 //auth
 @import './components/auth/login';
 @import './components/auth/register';
+
+//Patients
+@import './components/patients/patientsNavbar';
+@import './components/patients/patients';
+@import './components/patients/addPatient';
+@import './components/patients/editPatient';
+
+//Sidebar
+@import './components/sidebar/sidebar';
+@import './components/sidebar/sidebarMenu';

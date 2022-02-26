@@ -1,0 +1,49 @@
+.add__patient__content{
+    width: 90%;
+    margin: 1rem auto 0 auto;
+
+    h1{
+        text-align: center;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+
+        input {
+            margin-bottom: 1rem;
+            border: none;
+            border-bottom: 1px solid black;
+            transition: all .4s;
+
+            &:hover{
+                border-color: blue;
+            }
+
+            &:focus-visible{
+                outline: none;
+            }
+        }
+
+        textarea{
+            margin-bottom: 1rem;
+
+            &:focus-visible{
+                outline: none;
+            }
+        }
+
+        button{
+            border: none;
+            background: #1c76b7;
+            color: white;
+            padding: 0.5rem 0;
+            transition: all .4s;
+
+            &:hover{
+                background-color: #0e3958;
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.patients__navbar{
+    width: 100%;
+    background: blue;
+
+    .patients__navbar__content{
+        padding: .7rem .8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+
+        @media (min-width: 768px){
+            justify-content: flex-end;
+        }
+
+            h5{
+                margin: 0;
+                
+
+            }
+
+            i{
+                @media (min-width: 768px){
+                    display: none;
+                }
+            }
+        
+
+    }
+
+    
+}
+

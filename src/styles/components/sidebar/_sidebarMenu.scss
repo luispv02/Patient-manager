@@ -1,0 +1,28 @@
+.sidebar__menu{
+
+    margin-top: 2rem;
+
+    nav{
+        ul{
+            padding: 0;
+            text-align: center;
+
+            li{
+                list-style: none;
+                margin: .5rem 0;
+
+                a{
+                    text-decoration: none;
+                    color: black;
+                    padding: 1rem 0;
+                    display: block;
+                    color: white;
+
+                    &:hover{
+                        background: red;
+                    }
+                }
+            }
+        }
+    }
+}

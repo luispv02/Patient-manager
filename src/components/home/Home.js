@@ -1,14 +1,28 @@
-import React from 'react'
-import Login from '../auth/Login'
-import Register from '../auth/Register'
+
+import Patients from '../patients/Patients'
+import Sidebar from '../sidebar/Sidebar'
 
 const Home = () => {
-  return (
-    <>
-      <Login />
 
-      {/* <Register /> */}
-    </>
+  
+
+  return (
+    <div className="container-fluid p-0">
+      <div className="row m-0">
+
+ 
+
+        <div className="col-12 col-md-4 col-lg-3 p-0">          
+          <Sidebar />
+        </div>
+
+
+        <div className="col-12 col-md-8 col-lg-9 p-0">
+          <Patients />
+        </div>
+   
+      </div>
+    </div>
   )
 }
 
