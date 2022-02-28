@@ -1,17 +1,13 @@
 
+import AddPatient from '../patients/AddPatient'
+import EditPatient from '../patients/EditPatient'
 import Patients from '../patients/Patients'
 import Sidebar from '../sidebar/Sidebar'
 
 const Home = () => {
-
-  
-
   return (
     <div className="container-fluid p-0">
       <div className="row m-0">
-
- 
-
         <div className="col-12 col-md-4 col-lg-3 p-0">          
           <Sidebar />
         </div>

@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 
-const firebaseConfig = {
+
+ const firebaseConfig = {
   apiKey: "AIzaSyB2h_xU9on153k0ZInu3YrqRWBnCeYsC2s",
   authDomain: "patient-manager-8e1e0.firebaseapp.com",
   projectId: "patient-manager-8e1e0",
@@ -10,4 +11,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
+
+
+
