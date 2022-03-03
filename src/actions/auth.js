@@ -21,7 +21,7 @@ export const startRegisteUser = (email,password1, name) => {
         .then(async ({user}) => {
             await updateProfile(user, {displayName: name})
             dispatch(login(user.uid, user.displayName));
-            dispatch(finishLoading())
+            dispatch(finishLoading());
             Swal.close()
         })
         .catch((error) => {

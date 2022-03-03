@@ -41,8 +41,6 @@ export const patientsReducer = (state = initialState, action) => {
                     : patient
                 )
             }
-
-    
         default:
             return state
     }

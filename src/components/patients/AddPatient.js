@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { startAddPatien } from '../../actions/patients';
+import { startAddPatient } from '../../actions/patients';
 import { removeMsgError, showMsgError, startLoading } from '../../actions/ui';
 import useForm from '../../hooks/useForm';
 import Sidebar from '../sidebar/Sidebar';
@@ -31,8 +31,8 @@ const AddPatient = () => {
     }
    
     resetForm()
+    dispatch(startAddPatient(formValues));
     dispatch(removeMsgError())
-    dispatch(startAddPatien(formValues));
     dispatch(startLoading())
   }
  
@@ -48,7 +48,7 @@ const AddPatient = () => {
             <PatientsNavbar />
 
             <div className="add__patient__content">
-              <h1>Agregar Paciente</h1>
+              <h1>Add Patient</h1>
 
               {
                     msgError && <p className="msg-error">{msgError}</p>
@@ -88,7 +88,7 @@ const AddPatient = () => {
                 />
 
                 <textarea 
-                  placeholder="Motivo cita" 
+                  placeholder="Reason for the appointment" 
                   name="reason"
                   onChange={handleInputChange}
                   value={reason}

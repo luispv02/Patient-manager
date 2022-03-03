@@ -49,7 +49,7 @@ const EditPatient = () => {
             <PatientsNavbar />
 
             <div className="edit__patient__content">
-              <h1>Editar Paciente</h1>
+              <h1>Edit Patient</h1>
 
               <form
                 onSubmit={handleSaveEdit}
@@ -85,7 +85,7 @@ const EditPatient = () => {
                 />
 
                 <textarea 
-                  placeholder="Motivo cita"
+                  placeholder="Reason for the appointment"
                   value={reason}
                   name="reason"
                   onChange={handleInputChange}

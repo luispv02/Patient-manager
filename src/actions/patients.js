@@ -4,7 +4,7 @@ import {db} from '../firebase/firebase-config'
 import { types } from '../types/types';
 import { finishLoading } from './ui';
 
-export const startAddPatien = (patient) => {
+export const startAddPatient = (patient) => {
     return async(dispatch, getState) => {
 
         const {uid} = getState().auth;
@@ -22,8 +22,6 @@ export const startAddPatien = (patient) => {
         dispatch(addPatient(docRef.id, patient))
         dispatch(finishLoading())
         Swal.fire({icon: 'success', title: 'Saved patient'})
-        
-       
     }
 }
 
@@ -43,7 +41,7 @@ export const getPatients = (uid) => {
         const patients = []
 
         const patientsBd = await getDocs(collection(db, `${uid}/patientManager/patients`));
-        patientsBd.forEach(patient => {
+        patientsBd.forEach((patient) => {
             patients.push({
                 id: patient.id,
                 ...patient.data()
