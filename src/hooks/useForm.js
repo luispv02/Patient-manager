@@ -11,7 +11,11 @@ const useForm = (state = {}) => {
         })
     }
 
-    return [formValues, handleInputChange]
+    const resetForm = () => {
+        setformValues(state)
+    }
+
+    return [formValues, handleInputChange, resetForm]
 
 }
 

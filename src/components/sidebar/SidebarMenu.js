@@ -12,10 +12,10 @@ const SidebarMenu = () => {
       <nav>
         <ul>
           <li>
-            <NavLink to='/' onClick={() => dispatch(hiddenMenu())}>Pacientes</NavLink>
+            <NavLink to='/' onClick={() => dispatch(hiddenMenu())}>Patients</NavLink>
           </li>
           <li>
-            <NavLink to='/add' onClick={() => dispatch(hiddenMenu())}>Agregar Paciente</NavLink>
+            <NavLink to='/add' onClick={() => dispatch(hiddenMenu())}>Add patients</NavLink>
           </li>
         </ul>
       </nav>

@@ -1,5 +1,9 @@
 // Variables
 
+$bg-navbar: #207ce5;
+$bg-sidebar: #002c6e;
+$bg-active: #0e1320;
+$btn-auth: #183fad;
 
 .msg-error{
     margin: 0 0.4rem;
@@ -9,4 +13,9 @@
     padding: 0.3rem 0.1rem;
     font-size: .9rem;
     line-height: 1rem;
+    text-align: center;
+}
+
+.loading{
+    cursor: not-allowed;
 }

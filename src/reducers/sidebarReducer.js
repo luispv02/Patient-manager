@@ -1,7 +1,7 @@
 import { types } from "../types/types"
 
 const initialState = {
-    showMenu: false
+    showSidebar: false
 }
 
 export const sidebarReducer = (state = initialState, action) => {
@@ -9,13 +9,13 @@ export const sidebarReducer = (state = initialState, action) => {
         case types.openMen: 
             return {
                 ...state,
-                showMenu: true
+                showSidebar: true
             }
 
         case types.closeMenu: 
             return {
                 ...state,
-                showMenu: false
+                showSidebar: false
             }
 
         default:

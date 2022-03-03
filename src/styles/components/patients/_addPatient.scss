@@ -17,7 +17,25 @@
             border-bottom: 1px solid black;
             transition: all .4s;
 
-            &:hover{
+            &:focus{
+                border-color: blue;
+            }
+
+            &:focus-visible{
+                outline: none;
+            }
+
+            &::-webkit-inner-spin-button, 
+            &::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+            }
+        }
+
+        textarea{
+            margin-bottom: 1rem;
+
+            &:focus{
                 border-color: blue;
             }
 
@@ -26,15 +44,7 @@
             }
         }
 
-        textarea{
-            margin-bottom: 1rem;
-
-            &:focus-visible{
-                outline: none;
-            }
-        }
-
-        button{
+        .btn-add{
             border: none;
             background: #1c76b7;
             color: white;

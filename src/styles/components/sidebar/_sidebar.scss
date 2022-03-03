@@ -2,7 +2,7 @@
     width: 100%;
     
     .sidebar__content{
-        background: blue;
+        background:  $bg-sidebar;
         width: 100%;
         height: 100vh;
         position: absolute;
@@ -25,9 +25,10 @@
                 color: white;
             }
             
-            a{
+            button{
                 color: white;
-                text-decoration: none;
+                background: none;
+                border: none;           
             }
         }
 
@@ -42,6 +43,7 @@
             }
 
             i{
+                cursor: pointer;
                 color: white;
                 font-size: 2rem;
             }

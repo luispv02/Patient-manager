@@ -9,7 +9,9 @@ import { startRegisteUser } from '../../actions/auth'
 const Register = () => {
 
     const dispatch = useDispatch()
-    const {msgError} = useSelector(state => state.ui);
+    const state = useSelector(state => [state.ui.msgError, state.ui.loading]);
+    const msgError = state[0]
+    const loading = state[1]
 
     const [formValues, handleInputChange] = useForm({
         name: '',
@@ -23,19 +25,19 @@ const Register = () => {
         e.preventDefault();
 
         if(validFormRegister()){
-            dispatch(startRegisteUser(email,password1, name))
+            dispatch(startRegisteUser(email,password1, name));
         }
     }
 
     const validFormRegister = () => {
         if(name.trim().length < 2){
-            dispatch(showMsgError('Nombre incorrecto'))
+            dispatch(showMsgError('Invalid name'))
             return false
         }else if(!validator.isEmail(email)){
-            dispatch(showMsgError('Email incorrecto'))
+            dispatch(showMsgError('Invalid email'))
             return false
         }else if(password1.trim().length < 6 || password1 !== password2){
-            dispatch(showMsgError('La contraseña debe tener mas de 6 caracteres y deben ser iguales'))
+            dispatch(showMsgError('Passwords must have more than 6 characters and must be the same'))
             return false
         }
 
@@ -86,8 +88,9 @@ const Register = () => {
 
                     <input 
                         type="submit"
-                        className="btn-register"
+                        className={loading ? 'btn-register loading' :  'btn-register'}
                         value="Register"
+                        disabled={loading}       
                     />
                 </form>
 

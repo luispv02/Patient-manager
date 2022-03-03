@@ -19,7 +19,7 @@
                     color: white;
 
                     &:hover{
-                        background: red;
+                        background: $bg-active;
                     }
                 }
             }
@@ -28,5 +28,5 @@
 }
 
 .active{
-    background: green;
+    background: $bg-active;
 }

@@ -9,7 +9,9 @@ import { removeMsgError, showMsgError } from '../../actions/ui'
 const Login = () => {
 
     const dispatch = useDispatch();
-    const {msgError} = useSelector(state => state.ui)
+    const state = useSelector(state => [state.ui.msgError, state.ui.loading]);
+    const msgError = state[0]
+    const loading = state[1]
 
     const [formValues, handleInputChange] = useForm({
         email: '',
@@ -21,10 +23,10 @@ const Login = () => {
         e.preventDefault();
 
         if(!validator.isEmail(email)){
-            dispatch(showMsgError('Email incorrecto'))
+            dispatch(showMsgError('Invalid email'))
             return false;
         }else if(password.trim().length < 6){
-            dispatch(showMsgError('La contraseña debe ser mayor a 6 caracteres'))
+            dispatch(showMsgError('The password must have more than 6 characters'))
             return false;
         }
         dispatch(removeMsgError())
@@ -62,8 +64,9 @@ const Login = () => {
 
                     <input 
                         type="submit"
-                        className="btn-login"
+                        className={loading ? 'btn-login loading' :  'btn-login'}
                         value="Login"
+                        disabled={loading}
                     />
                 </form>
 

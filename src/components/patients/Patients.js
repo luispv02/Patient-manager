@@ -1,9 +1,11 @@
-import React, { useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import Sidebar from "../sidebar/Sidebar";
+import Patient from "./Patient";
 import PatientsNavbar from "./PatientsNavbar";
 
 const Patients = () => {
+
+  const {patients} = useSelector(state => state.patients);
 
   return (
     <div className="container-fluid p-0">
@@ -19,35 +21,32 @@ const Patients = () => {
             <div className="patients__content">
               <h1>Patients</h1>
 
-              <table className="table">
-                <thead>
-                  <tr>
-                    <th>Nombre</th>
-                    <th>Telefono</th>
-                    <th>Fecha</th>
-                    <th>Hora</th>
-                    <th>Motivo Cita</th>
-                  </tr>
-                </thead>
+              {
+                patients.length !== 0
+                ? <table className="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Nombre</th>
+                        <th>Telefono</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Motivo Cita</th>
+                      </tr>
+                    </thead>
 
-                <tbody>
-                  <tr>
-                    <td>Luis Fernando Perez Varajas</td>
-                    <td>7841109307</td>
-                    <td>03 de octubre 2022</td>
-                    <td>03:34 p.m</td>
-                    <td>Mensualidad</td>
-                    <td>
-                      <i className="fa-solid fa-xmark"></i>
-                    </td>
-                    <td>
-                      <Link to='/edit'>
-                        <i className="fa-solid fa-pen-to-square"></i>
-                      </Link>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                    <tbody>
+                      {
+                        patients.map(patient => (
+                          <Patient 
+                            key={patient.id}
+                            {...patient}
+                          />
+                        ))
+                      }
+                    </tbody>
+                  </table>
+                : <h1>No patients</h1>
+              }
             </div>
           </div>
         </div>

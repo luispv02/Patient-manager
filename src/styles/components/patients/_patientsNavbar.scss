@@ -1,6 +1,6 @@
 .patients__navbar{
     width: 100%;
-    background: blue;
+    background: $bg-navbar;
 
     .patients__navbar__content{
         padding: .7rem .8rem;
@@ -20,6 +20,7 @@
             }
 
             i{
+                cursor: pointer;
                 @media (min-width: 768px){
                     display: none;
                 }
