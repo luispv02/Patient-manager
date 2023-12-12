@@ -40,11 +40,23 @@ const AddPatient = () => {
   return (
     <div className="application">
       <Helmet>
+        <meta name="description" content="Administrador de Pacientesssss" />
+
+        {/* <!-- Facebook Meta Tags --> */}
+        <meta property="og:url" content="https://patient-manager-41wnidiov-luispv02.vercel.app/" />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content="Administrador de Pacientes" />
         <meta property="og:description" content="Pagina para administrar tus pacientes, editar y eliminar registros" />
-        <meta property="og:image" content="https://www.webdevelopmentscripts.com/post-images/685b-change-browser-address-bar-color-chrome-android.jpeg" />
-        <meta property="og:url" content="https://patient-manager-41wnidiov-luispv02.vercel.app" />
-        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1700721728829-ae246d335d87?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=630&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTcwMjMyNjIzNg&ixlib=rb-4.0.3&q=80&w=1200" />
+
+        {/* <!-- Twitter Meta Tags --> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="my-updated-portfolio.vercel.app" />
+        <meta property="twitter:url" content="https://patient-manager-41wnidiov-luispv02.vercel.app/" />
+        <meta name="twitter:title" content="Administrador de Pacientes" />
+        <meta name="twitter:description" content="Pagina para administrar tus pacientes, editar y eliminar registros" />
+        <meta name="twitter:image" content="https://images.unsplash.com/photo-1700721728829-ae246d335d87?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=630&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTcwMjMyNjIzNg&ixlib=rb-4.0.3&q=80&w=1200" />
+
       </Helmet>
     
       <div className="container-fluid p-0">
