@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { startAddPatient } from '../../actions/patients';
 import { removeMsgError, showMsgError, startLoading } from '../../actions/ui';
@@ -35,6 +35,42 @@ const AddPatient = () => {
     dispatch(removeMsgError())
     dispatch(startLoading())
   }
+
+  
+  useEffect(() => {
+    // Actualizar las etiquetas meta
+    updateMetaTags();
+  }, []);
+
+  const updateMetaTags = () => {
+
+    console.log('location: ', window.location.hostname)
+
+    const existingOGMetaTags = document.querySelectorAll('meta[property^="og:"]');
+    existingOGMetaTags.forEach(tag => tag.remove());
+
+    createMetaTag("og:title", "Mi Pagina Web")
+    createMetaTag("og:type", "website")
+    createMetaTag("og:image", "https://www.webdevelopmentscripts.com/post-images/685b-change-browser-address-bar-color-chrome-android.jpeg", "image")
+    createMetaTag("og:url", "https://www.google.com/")
+    createMetaTag("og:description", "Descripción sobre mi y de la pagina creada")
+    createMetaTag("og:image:type", "image/jpeg")
+    // createMetaTag("og:image:width", "256")
+    // createMetaTag("og:image:height", "256")
+
+  }; 
+
+  const createMetaTag = (property, content, itemprop) => {
+    const metaTag = document.createElement("meta");
+    metaTag.setAttribute("property", property);
+    if(itemprop){
+      metaTag.setAttribute("itemprop", itemprop);
+    }
+    metaTag.setAttribute("content", content);
+    console.log('metaTag: ', metaTag)
+
+    document.head.appendChild(metaTag);
+  };
  
   return (
     <div className="container-fluid p-0">
